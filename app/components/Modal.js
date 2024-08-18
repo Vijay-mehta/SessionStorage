@@ -34,7 +34,7 @@ const Modal=({currentUser ,setIsModal,setUserData})=>{
 
     return(
         <div className=" fixed inset-0  bg-black   bg-opacity-50  backdrop-blur-sm">
-       <div className=" bg-white w-[500px] m-auto mt-10">
+       <div className=" bg-white w-[350px] md:w-[500px] m-auto mt-10">
        <form
         onSubmit={handleSubmit}
         className="  flex  flex-col"

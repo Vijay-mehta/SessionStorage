@@ -51,7 +51,7 @@ export default function Home() {
     {isModal && <Modal setIsModal={setIsModal} currentUser={currentUser} setUserData={setUserData}/>}
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-[500px] m-auto  mt-10   bg-white"
+        className="flex flex-col w-[350px]  md:w-[500px] m-auto  mt-10   bg-white"
       >
         <h1 className=" font-bold text-2xl text-center mb-5">
           Create User in Session Storage
@@ -86,10 +86,10 @@ export default function Home() {
       </form>
       {userData &&
         userData.map((user, index) => (
-          <div key={index} className="bg-white p-8 shadow-lg w-[400px] m-auto my-3">
+          <div key={index} className="bg-white p-8 shadow-lg w-[400px] md:w-[350px] m-auto my-4">
             <div className=" flex  justify-end ">
-              <span className=" mr-4 cursor-pointer" onClick={()=>handleEdit(user)}>&#9998;</span>
-              <span className=" cursor-pointer" onClick={()=>handleRemove(index)}>&times;</span>
+              <span className=" mr-5 cursor-pointer" onClick={()=>handleEdit(user)}>&#9998;</span>
+              <span className="mr-3 cursor-pointer" onClick={()=>handleRemove(index)}>&times;</span>
             </div>
             <h2>{user.name}</h2>
             <h2>{user.email}</h2>
